@@ -1,8 +1,9 @@
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-class CtrlGUI {
+public class CtrlGUI {
 
 
     @SuppressWarnings("SleepWhileInLoop")
@@ -39,5 +40,41 @@ class CtrlGUI {
         }
             
     }
-    
-}
+    @SuppressWarnings("SleepWhileInLoop")
+    public static void keysTyped(String keys, int waiTime)
+    {
+        try {
+            Robot r = new Robot();
+            for(int i = 0 ; i < keys.length();i++)
+            {
+                if(keys.charAt(i)=='\b')
+                {
+                    r.keyPress(KeyEvent.VK_BACK_SPACE);
+                    r.keyRelease(KeyEvent.VK_BACK_SPACE);
+                }
+                else if(keys.charAt(i)==' ')
+                {
+                    r.keyPress(KeyEvent.VK_SPACE);
+                    r.keyRelease(KeyEvent.VK_SPACE);
+                }
+                else if(keys.charAt(i)=='\n')
+                {
+                    r.keyPress(KeyEvent.VK_ENTER);
+                    r.keyRelease(KeyEvent.VK_ENTER);
+                }
+                else if(keys.charAt(i)=='\F')
+            {
+                r.keyPress(KeyEvent.VK_CAPS_LOCK);
+                r.keyRelease(KeyEvent.VK_CAPS_LOCK);
+            }
+                else
+                {
+                    r.keyPress((int)keys.charAt(i));
+                    r.keyRelease((int)keys.charAt(i));
+                }
+                Thread.sleep(waiTime);
+            }
+        } catch (AWTException | InterruptedException ex) {
+            Logger.getLogger(CtrlGUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
