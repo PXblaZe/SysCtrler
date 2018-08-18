@@ -62,11 +62,11 @@ public class CtrlGUI {
                     r.keyPress(KeyEvent.VK_ENTER);
                     r.keyRelease(KeyEvent.VK_ENTER);
                 }
-                else if(keys.charAt(i)=='\F')
-            {
-                r.keyPress(KeyEvent.VK_CAPS_LOCK);
-                r.keyRelease(KeyEvent.VK_CAPS_LOCK);
-            }
+                else if(keys.charAt(i)=='\f')
+                {
+                    r.keyPress(KeyEvent.VK_CAPS_LOCK);
+                    r.keyRelease(KeyEvent.VK_CAPS_LOCK);
+                }
                 else
                 {
                     r.keyPress((int)keys.charAt(i));
