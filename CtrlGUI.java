@@ -89,4 +89,4 @@ public class CtrlGUI {
             xy[1] = (int) b.getY();
             return xy;
        }
-    }
+}
