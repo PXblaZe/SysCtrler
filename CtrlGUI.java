@@ -80,9 +80,8 @@ public class CtrlGUI {
         } catch (AWTException | InterruptedException ex) {
             Logger.getLogger(CtrlGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
-        public static int[] mouseLoca()throws Exception
+        public static int[] musLocason()
         {
-            Thread.sleep(2000);
             int xy[] = new int[2];
             PointerInfo a = MouseInfo.getPointerInfo();
             Point b = a.getLocation();
