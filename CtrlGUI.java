@@ -15,29 +15,14 @@ public class CtrlGUI {
         try {        
             Robot r = new Robot();
             int x=x1;
-            double m = (y2-y1)/(x2-x1);
-            if(x<x2)
+            double m = (y2-y1)/(x2-x1),y=0.0;
+            for(int x = x1;x<=x2;x++)
             {
-                while(x<=x2)
-                {
-                    int y=(int) ((x*m));
-
-                    r.mouseMove(x, y);
-                    x++;
-                    Thread.sleep(waiTime);
-                }
+                y=((x-x1)*m)+y1;
+                r.mouseMove(x,y);
+                THread.sleep(waiTime);
             }
-            else if(x>x2)
-            {
-                while(x>=x2)
-                {
-                    int y=(int)((x*m));
-
-                    r.mouseMove(x, y);
-                    x--;
-                    Thread.sleep(waiTime);
-                }
-            }
+            
         } catch (AWTException | InterruptedException ex) {
             Logger.getLogger(CtrlGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
