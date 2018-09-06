@@ -16,10 +16,10 @@ public class CtrlGUI {
             Robot r = new Robot();
             int x=x1;
             double m = (y2-y1)/(x2-x1),y=0.0;
-            for(int x = x1;x<=x2;x++)
+            for(;x<=x2;x++)
             {
                 y=((x-x1)*m)+y1;
-                r.mouseMove(x,y);
+                r.mouseMove(x,(int)y);
                 THread.sleep(waiTime);
             }
             
