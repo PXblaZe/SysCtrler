@@ -10,7 +10,7 @@ public class CtrlGUI {
 
 
     @SuppressWarnings("SleepWhileInLoop")
-    public static void moveMouse(int x1,int y1,int x2,int y2,int waiTime)
+    public static void moveArrow(int x1,int y1,int x2,int y2,int waiTime)
     {
         try {        
             Robot r = new Robot();
