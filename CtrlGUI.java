@@ -1,8 +1,8 @@
-import java.awt.Point;
-import java.awt.Robot;
-import java.awt.MouseInfo;
-import java.awt.PointerInfo;
 import java.awt.AWTException;
+import java.awt.MouseInfo;
+import java.awt.Point;
+import java.awt.PointerInfo;
+import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -65,13 +65,15 @@ public class CtrlGUI {
         } catch (AWTException | InterruptedException ex) {
             Logger.getLogger(CtrlGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
-        public static int[] musLocason()
-        {
-            int xy[] = new int[2];
-            PointerInfo a = MouseInfo.getPointerInfo();
-            Point b = a.getLocation();
-            xy[0] = (int) b.getX();
-            xy[1] = (int) b.getY();
-            return xy;
-       }
+    }
+    public static int[] musLocason()
+    {
+        int xy[] = new int[2];
+        PointerInfo a = MouseInfo.getPointerInfo();
+        Point b = a.getLocation();
+        xy[0] = (int) b.getX();
+        xy[1] = (int) b.getY();
+        return xy;
+    }
+    
 }
