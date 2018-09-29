@@ -20,7 +20,7 @@ public class CtrlGUI {
             {
                 y=((x-x1)*m)+y1;
                 r.mouseMove(x,(int)y);
-                THread.sleep(waiTime);
+                Thread.sleep(waiTime);
             }
             
         } catch (AWTException | InterruptedException ex) {
