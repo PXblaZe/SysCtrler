@@ -66,7 +66,7 @@ public class CtrlGUI {
             Logger.getLogger(CtrlGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public static int[] musLocason()
+    public static int[] musLoc()
     {
         int xy[] = new int[2];
         PointerInfo a = MouseInfo.getPointerInfo();
